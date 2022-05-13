@@ -18,12 +18,12 @@ db.album = require("./album.model.js")(sequelize, Sequelize);
 db.artist = require("./artist.model.js")(sequelize, Sequelize);
 db.track = require("./track.model.js")(sequelize, Sequelize);
 
-// foreign key for track
-db.album.hasMany(db.track, { as: 'track'}, { foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
-db.track.belongsTo(db.album, { as: 'album' }, { foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+// // foreign key for track
+// db.album.hasMany(db.track, { as: 'track'}, { foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+// db.track.belongsTo(db.album, { as: 'album' }, { foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
 
-// foreign key for artist
-db.album.hasMany(db.artist, { as: 'artist'}, { foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
-db.artist.belongsTo(db.album, { as: 'album' }, { foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+// // foreign key for artist
+// db.album.hasMany(db.artist, { as: 'artist'}, { foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+// db.artist.belongsTo(db.album, { as: 'album' }, { foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
 
 module.exports = db;
